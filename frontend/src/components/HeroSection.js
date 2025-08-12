@@ -165,7 +165,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Product Showcase */}
-          <div className="hero-product opacity-0 animate-fadeInRight animation-delay-500">
+          <div className="hero-product opacity-0 animate-fadeInRight animation-delay-500 -mt-12">
             <div className="relative">
               {/* Main Product Image with Enhanced Effects */}
               <div className="product-showcase group relative">
@@ -178,21 +178,21 @@ const HeroSection = () => {
                   />
                   
                   {/* Floating Feature Tags */}
-                  <div className="absolute -top-4 -left-4 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white px-4 py-2 rounded-2xl shadow-xl transform rotate-[-12deg] group-hover:rotate-[-8deg] group-hover:scale-110 transition-all duration-300">
+                  <div className="absolute -top-6 -left-6 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white px-5 py-3 rounded-2xl shadow-xl transform rotate-[-12deg] group-hover:rotate-[-8deg] group-hover:scale-110 transition-all duration-300">
                     <div className="flex items-center space-x-2">
-                      <Shield className="w-4 h-4" />
+                      <Shield className="w-5 h-5" />
                       <span className="font-semibold text-sm">100% Privacy</span>
                     </div>
                   </div>
                   
-                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#4982c3] to-[#27326e] text-white px-4 py-2 rounded-2xl shadow-xl transform rotate-[12deg] group-hover:rotate-[8deg] group-hover:scale-110 transition-all duration-300">
+                  <div className="absolute -top-6 -right-6 bg-gradient-to-r from-[#4982c3] to-[#27326e] text-white px-5 py-3 rounded-2xl shadow-xl transform rotate-[12deg] group-hover:rotate-[8deg] group-hover:scale-110 transition-all duration-300">
                     <div className="flex items-center space-x-2">
-                      <Zap className="w-4 h-4" />
+                      <Zap className="w-5 h-5" />
                       <span className="font-semibold text-sm">5min Setup</span>
                     </div>
                   </div>
                   
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-800 dark:text-white px-6 py-3 rounded-2xl shadow-xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300">
+                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm text-gray-800 dark:text-white px-8 py-4 rounded-2xl shadow-xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300">
                     <div className="text-center">
                       <div className="font-bold text-lg bg-gradient-to-r from-[#27326e] to-[#4982c3] bg-clip-text text-transparent">
                         Wall-Mounted & Portable
