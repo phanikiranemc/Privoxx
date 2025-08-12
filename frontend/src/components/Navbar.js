@@ -23,17 +23,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg' 
-        : 'bg-transparent'
+        ? 'w-[95%] max-w-6xl' 
+        : 'w-[90%] max-w-5xl'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="glassmorphic-navbar bg-white/20 dark:bg-gray-900/30 backdrop-blur-2xl rounded-3xl border border-white/20 dark:border-gray-700/30 shadow-2xl px-6 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#27326e] to-[#4982c3] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
+          <div className="flex items-center space-x-3 group cursor-pointer">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#27326e] to-[#4982c3] flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+              <span className="text-white font-bold text-xl">P</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-[#27326e] to-[#4982c3] bg-clip-text text-transparent">
               Privoxx
@@ -41,32 +41,43 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             <button 
               onClick={() => scrollToSection('products')}
-              className="nav-link text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] transition-colors duration-200"
+              className="nav-link-enhanced px-6 py-2.5 rounded-2xl text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium backdrop-blur-sm"
             >
               Products
             </button>
             <button 
               onClick={() => scrollToSection('reviews')}
-              className="nav-link text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] transition-colors duration-200"
+              className="nav-link-enhanced px-6 py-2.5 rounded-2xl text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-300 font-medium backdrop-blur-sm"
             >
               Reviews
             </button>
+            
+            {/* Book Demo Button */}
             <button 
               onClick={() => scrollToSection('demo')}
-              className="btn-primary rounded-full px-6 py-2 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              className="btn-primary-enhanced group relative overflow-hidden rounded-2xl px-8 py-3 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ml-4"
             >
-              Book Demo
+              <span className="relative z-10 flex items-center">
+                Book Demo
+                <div className="ml-2 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#4982c3] to-[#27326e] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className="theme-toggle p-3 rounded-2xl bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-700/30 transition-all duration-300 ml-2 backdrop-blur-sm group"
             >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              <div className="transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                {isDarkMode ? 
+                  <Sun className="w-5 h-5 text-yellow-500" /> : 
+                  <Moon className="w-5 h-5 text-[#27326e]" />
+                }
+              </div>
             </button>
           </div>
 
@@ -74,38 +85,45 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-3">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className="theme-toggle p-3 rounded-2xl bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-700/30 transition-all duration-300 backdrop-blur-sm group"
             >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              <div className="transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                {isDarkMode ? 
+                  <Sun className="w-5 h-5 text-yellow-500" /> : 
+                  <Moon className="w-5 h-5 text-[#27326e]" />
+                }
+              </div>
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className="p-3 rounded-2xl bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-700/30 transition-all duration-300 backdrop-blur-sm"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <div className="transform transition-all duration-300">
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </div>
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg rounded-b-2xl">
-            <div className="px-4 py-6 space-y-4">
+          <div className="md:hidden mt-6 pt-6 border-t border-white/20 dark:border-gray-700/20 animate-fadeInUp">
+            <div className="space-y-3">
               <button 
                 onClick={() => {scrollToSection('products'); setIsMobileMenuOpen(false);}}
-                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] transition-colors duration-200"
+                className="block w-full text-left px-4 py-3 rounded-xl text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] hover:bg-white/20 dark:hover:bg-gray-800/20 transition-all duration-300 font-medium"
               >
                 Products
               </button>
               <button 
                 onClick={() => {scrollToSection('reviews'); setIsMobileMenuOpen(false);}}
-                className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] transition-colors duration-200"
+                className="block w-full text-left px-4 py-3 rounded-xl text-gray-700 dark:text-gray-300 hover:text-[#27326e] dark:hover:text-[#4982c3] hover:bg-white/20 dark:hover:bg-gray-800/20 transition-all duration-300 font-medium"
               >
                 Reviews
               </button>
               <button 
                 onClick={() => {scrollToSection('demo'); setIsMobileMenuOpen(false);}}
-                className="w-full btn-primary rounded-full px-6 py-3 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+                className="w-full btn-primary-enhanced rounded-2xl px-6 py-3 bg-gradient-to-r from-[#27326e] to-[#4982c3] text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4"
               >
                 Book Demo
               </button>
