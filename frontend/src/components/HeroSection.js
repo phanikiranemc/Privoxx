@@ -94,11 +94,11 @@ const HeroSection = () => {
           {/* Left Side - Content */}
           <div className="hero-content opacity-0 animate-fadeInUp">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              <span className="inline-block bg-gradient-to-r from-[#27326e] via-[#4982c3] to-[#27326e] bg-clip-text text-transparent dark:text-white dark:bg-none animate-gradient bg-[length:200%_auto]">
+              <span className="hero-headline inline-block bg-gradient-to-r from-[#27326e] via-[#4982c3] to-[#27326e] bg-clip-text text-transparent dark:!text-white animate-gradient bg-[length:200%_auto]">
                 Instant Privacy.
               </span>
               <br />
-              <span className="inline-block bg-gradient-to-r from-[#4982c3] via-[#27326e] to-[#4982c3] bg-clip-text text-transparent dark:text-white dark:bg-none animate-gradient bg-[length:200%_auto] animation-delay-500">
+              <span className="hero-headline inline-block bg-gradient-to-r from-[#4982c3] via-[#27326e] to-[#4982c3] bg-clip-text text-transparent dark:!text-white animate-gradient bg-[length:200%_auto] animation-delay-500">
                 Anytime. Anywhere.
               </span>
             </h1>
