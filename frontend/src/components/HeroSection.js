@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, ArrowRight, Sparkles } from 'lucide-react';
+import { Play, ArrowRight, Sparkles, Shield, Zap } from 'lucide-react';
 
 const HeroSection = () => {
   const [statsAnimated, setStatsAnimated] = useState(false);
