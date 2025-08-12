@@ -88,16 +88,7 @@ const HeroSection = () => {
           }}
         ></div>
         
-        {/* Sparkle Effects */}
-        <div className="absolute top-1/4 left-1/4 animate-pulse">
-          <Sparkles className="w-8 h-8 text-[#4982c3]/40" />
-        </div>
-        <div className="absolute top-1/3 right-1/3 animate-pulse animation-delay-1000">
-          <Sparkles className="w-6 h-6 text-[#27326e]/40" />
-        </div>
-        <div className="absolute bottom-1/3 right-1/4 animate-pulse animation-delay-2000">
-          <Sparkles className="w-10 h-10 text-[#4982c3]/40" />
-        </div>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
